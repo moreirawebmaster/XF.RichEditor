@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  
+    <AssemblyName>Plugin.RichEditor</AssemblyName>
+    <RootNamespace>Plugin.RichEditor</RootNamespace>
+    
+    <LangVersion>7.1</LangVersion>
+    <Configurations>Debug;Release;iOS Release</Configurations>
+
+    <Product>$(AssemblyName) ($(TargetFramework))</Product>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+    
+
+    <PackageId>Plugin.RichEditor</PackageId>
+    <Version>1.0.0.0</Version>
+    <PackageVersion>1.0.0.0</PackageVersion>
+    <PackOnBuild>true</PackOnBuild>
+    <NeutralLanguage>en</NeutralLanguage>
+    <LangVersion>default</LangVersion>
+    <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+
+    <!--TODO: Fill these in-->
+    <PackageLicenseUrl>LINK TO LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>LINK TO PROJECT</PackageProjectUrl>
+    <RepositoryUrl>LINK TO PROJECT</RepositoryUrl>
+    <PackageReleaseNotes>RELEASE NOTES</PackageReleaseNotes>
+    <PackageIconUrl>ICON URL</PackageIconUrl>
+    <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, RichEditor</PackageTags>
+    
+    <Title>RichEditor Plugin for Xamarin and Windows</Title>
+    <Summary>Summary of nuget</Summary>
+    <Description>Plugin Description</Description>
+    
+    
+    <Owners>Thiago Moreira</Owners>
+    <Authors>Thiago Moreira</Authors>
+    <Copyright>Copyright 2019</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Shared\EditorResources\editor.html" />
+    <None Remove="Shared\EditorResources\ZSSRichTextEditor.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Shared\Base.cs" />
+    <Compile Include="Shared\CrossRichEditor.cs" />
+    <Compile Include="Shared\EditorAPI.cs" />
+    <Compile Include="Shared\IRichEditor.cs" />
+    <Compile Include="Shared\IRichEditorApi.cs" />
+    <Compile Include="Shared\Response.cs" />
+    <Compile Include="Shared\RichEditor.cs" />
+    <Compile Include="Shared\RichEditorToolbarItem.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Shared\EditorResources\editor.html" />
+    <EmbeddedResource Include="Shared\EditorResources\ZSSRichTextEditor.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.539721" />
+  </ItemGroup>
+
+</Project>

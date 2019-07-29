@@ -2239,7 +2239,6 @@ namespace RichEditorSample.Droid
 			global::Plugin.RichEditor.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::RichEditorSample.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
 			global::Plugin.RichEditor.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::RichEditorSample.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
 			global::Plugin.RichEditor.Droid.Resource.Style.Widget_Support_CoordinatorLayout = global::RichEditorSample.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
-			global::Plugin.RichEditor.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::RichEditorSample.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 			global::Plugin.RichEditor.Droid.Resource.Styleable.ActionBar = global::RichEditorSample.Droid.Resource.Styleable.ActionBar;
 			global::Plugin.RichEditor.Droid.Resource.Styleable.ActionBar_background = global::RichEditorSample.Droid.Resource.Styleable.ActionBar_background;
 			global::Plugin.RichEditor.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::RichEditorSample.Droid.Resource.Styleable.ActionBar_backgroundSplit;

@@ -331,8 +331,8 @@ namespace Plugin.RichEditor.iOS
                 _richTextEditor.InternalHtml = "";
             _richTextEditor.UpdateHtml();
 
-            if (_richTextEditor.AutoFocusInput)
-                _richTextEditor.Focus();
+            /*if (_richTextEditor.AutoFocusInput)*/
+            _richTextEditor.Focus();
         }
     }
 }

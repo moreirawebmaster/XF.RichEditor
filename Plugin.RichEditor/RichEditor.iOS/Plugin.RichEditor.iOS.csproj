@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{11104195-A053-4582-9725-CD34EBE64C2F}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{440aa056-593a-4519-8708-27081dee632f}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Plugin.RichEditor.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Plugin.RichEditor.iOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'iOS Release|AnyCPU'">
+    <OutputPath>bin\iOS Release\</OutputPath>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ColorPickerCustomViewController.cs" />
+    <Compile Include="ColorPickerFavoriteViewController.cs" />
+    <Compile Include="ColorPickerHSBView.cs" />
+    <Compile Include="ColorPickerHueCircleView.cs" />
+    <Compile Include="ColorPickerHueGridViewController.cs" />
+    <Compile Include="ColorPickerStandardViewController.cs" />
+    <Compile Include="DisplayHelper.cs" />
+    <Compile Include="EditorViewController.cs" />
+    <Compile Include="FavoriteColorManager.cs" />
+    <Compile Include="HideFormAccessoryBar.cs" />
+    <Compile Include="LayerHelper.cs" />
+    <Compile Include="PopColorPickerViewController.cs" />
+    <Compile Include="RichEditor.cs" />
+    <Compile Include="RichEditorImplementation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.6.0.539721</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\color-bar%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\color-picker-custom%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\color-picker-favorite%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\color-picker-grid%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\color-picker-inner-marker%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\color-picker-marker%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\color-picker-save%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\color-picker-trash%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSbgcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSbgcolor%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSbold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSbold%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSScenterjustify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSScenterjustify%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSclearstyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSclearstyle%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSforcejustify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSforcejustify%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSh1%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSh2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSh2%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSh3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSh3%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSh4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSh4%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSh5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSh5%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSh6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSh6%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSShorizontalrule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSShorizontalrule%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSimage%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSindent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSindent%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSinsertkeyword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSinsertkeyword%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSitalic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSitalic%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSkeyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSkeyboard%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSleftjustify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSleftjustify%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSlink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSlink%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSorderedlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSorderedlist%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSoutdent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSoutdent%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSparagraph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSparagraph%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSpicker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSpicker%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSquicklink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSquicklink%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSredo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSredo%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSrightjustify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSrightjustify%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSstrikethrough.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSstrikethrough%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSsubscript.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSsubscript%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSsuperscript.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSsuperscript%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSStable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSStable%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSStextcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSStextcolor%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSunderline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSunderline%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSundo%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSunlink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSunlink%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSunorderedlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSunorderedlist%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSviewsource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZSSviewsource%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Plugin.RichEditor.csproj">
+      <Project>{20160bb5-8700-44e6-a18b-6addfd6a82e0}</Project>
+      <Name>Plugin.RichEditor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

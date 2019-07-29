@@ -43,8 +43,8 @@ namespace Plugin.RichEditor.Droid.Controls
                 _richTextEditor.InternalHtml = "";
             _richTextEditor.UpdateHtml();
 
-            if (_richTextEditor.AutoFocusInput)
-                _richTextEditor.Focus();
+            /*if (_richTextEditor.AutoFocusInput)
+                _richTextEditor.Focus();*/
 
             base.OnPageFinished(view, url);
         }
